@@ -1,81 +1,205 @@
-# Turborepo starter
+# Cassida Core
+A flexible and extensible authentication library for TypeScript applications.
 
-This is an official starter Turborepo.
+![GitHub package.json version](https://img.shields.io/github/package-json/v/ReysinProject/cassyda-core)
+![GitHub License](https://img.shields.io/github/license/ReysinProject/cassyda-core)
+![GitHub top language](https://img.shields.io/github/languages/top/ReysinProject/cassyda-core)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/ReysinProject/cassyda-core)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/ReysinProject/cassyda-core)
 
-## Using this example
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
+<p align="center">⚠️ Please note that the package is in the experimental development phase. ⚠️</p>
+<p align="center">⚠️ You may use it at your own risk ⚠️. </p>
+
+---
+
+
+## Overview
+This authentication library provides a robust, scheme-based authentication system supporting multiple providers, and storage strategies. It's designed to be framework-agnostic and easily extensible.
+
+## Features
+- 🔐 Multiple authentication schemes (OAuth2, JWT, Credentials)
+- 👥 Role-based access control
+- 📦 Customizable storage strategies
+- 🔄 Token refresh handling
+- 🎯 Provider-agnostic design
+
+## Installation
+
+```bash
+npm install @cassida/core
+# or
+yarn add @cassida/core
+# or
+pnpm add @cassida/core
 ```
 
-## What's inside?
+## Quick Start
 
-This Turborepo includes the following packages/apps:
+```typescript
+import { AuthClient, AuthConfig } from '@cassida/core';
 
-### Apps and Packages
+const config: AuthConfig = {
+  schemes: {
+    default: {
+      id: 'default',
+      name: 'Default Scheme',
+      providers: [
+        new OAuth2Provider({
+          clientId: 'your-client-id',
+          clientSecret: 'your-client-secret',
+          redirectUri: 'http://localhost:3000/callback'
+        })
+      ],
+      options: {
+        tokenType: 'JWT'
+      }
+    }
+  },
+  defaultScheme: 'default',
+  storage: new LocalStorageStrategy()
+};
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+const auth = new AuthClient(config);
 ```
 
-### Develop
+## Core Concepts
 
-To develop all apps and packages, run the following command:
+### Authentication Schemes
+Schemes define how authentication works for different parts of your application. Each scheme can have its own:
+- Providers (OAuth2, Credentials, etc.)
+- Token handling options
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```typescript
+interface AuthScheme {
+  id: string;
+  name: string;
+  providers: AuthProvider[];
+  options: AuthSchemeOptions;
+}
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Providers
+Providers handle the actual authentication process with different services.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
+```typescript
+interface AuthProvider {
+  id: string;
+  name: string;
+  type: 'oauth' | 'credentials' | 'passwordless';
+  authorize(options: AuthorizeOptions): Promise<AuthResponse>;
+  validateToken(token: string): Promise<boolean>;
+}
 ```
-npx turbo link
+
+### Storage Strategies
+Define how authentication state is stored.
+
+```typescript
+interface StorageStrategy {
+  getItem(key: string): Promise<string | null>;
+  setItem(key: string, value: string): Promise<void>;
+  removeItem(key: string): Promise<void>;
+  clear(): Promise<void>;
+}
 ```
 
-## Useful Links
+## Authentication Flow
 
-Learn more about the power of Turborepo:
+1. **Configuration**
+```typescript
+const auth = new AuthClient({
+  schemes: {
+    default: defaultScheme,
+    admin: adminScheme
+  },
+  defaultScheme: 'default',
+  storage: new LocalStorageStrategy()
+});
+```
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+2. **Login**
+```typescript
+await auth.login({
+  provider: 'oauth2',
+  scheme: 'default',
+  params: {
+    scope: ['profile', 'email']
+  }
+});
+```
+
+3**Logout**
+```typescript
+await auth.logout();
+```
+
+## Advanced Usage
+
+### Custom Storage Strategy
+```typescript
+class CustomStorage implements StorageStrategy {
+  async getItem(key: string): Promise<string | null> {
+    // Your storage logic
+  }
+
+  async setItem(key: string, value: string): Promise<void> {
+    // Your storage logic
+  }
+
+  async removeItem(key: string): Promise<void> {
+    // Your storage logic
+  }
+
+  async clear(): Promise<void> {
+    // Your storage logic
+  }
+}
+```
+
+### Framework Integration
+
+#### React Integration
+```typescript
+function useAuth() {
+  const auth = new AuthClient(config);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    auth.isAuthenticated().then(setIsAuthenticated);
+  }, []);
+
+  return {
+    isAuthenticated,
+    login: auth.login.bind(auth),
+    logout: auth.logout.bind(auth),
+  };
+}
+```
+
+#### Vue Integration
+```typescript
+// Coming soon
+```
+
+## API Reference
+
+### AuthClient
+The main class for interacting with the authentication system.
+
+#### Methods
+
+| Method            | Description       | Parameters         | Return Type             |
+|-------------------|-------------------|--------------------|-------------------------|
+| `login`           | Authenticate user | `AuthorizeOptions` | `Promise<AuthResponse>` |
+| `logout`          | End session       | -                  | `Promise<void>`         |
+| `isAuthenticated` | Check auth status | -                  | `Promise<boolean>`      |
+| `getAccessToken`  | Get current token | -                  | `Promise<string>`       |
+
+### Contributing
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### License
+MIT License - see [LICENSE](LICENSE) for details.

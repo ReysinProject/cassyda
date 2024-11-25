@@ -1,54 +1,47 @@
 {
-  "compilerOptions": {
-    // Module Configuration
-    "target": "es2016",
-    "module": "commonjs",
+	"compilerOptions": {
+		// Module Configuration
+		"target": "es2016",
+		"module": "commonjs",
 
-    // Build Configuration
-    "outDir": "./dist",
-    "declaration": true,
-    "sourceMap": true,
+		// Build Configuration
+		"outDir": "./dist",
+		"declaration": true,
+		"sourceMap": true,
 
-    // Type Checking
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
+		// Type Checking
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
 
-    // Additional Checks
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+		// Additional Checks
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
 
-    // Module Resolution
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+		// Module Resolution
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
 
-    // Paths Configuration
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
+		// Paths Configuration
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
 
-    // Remove problematic options
-    "isolatedModules": false,
-    "composite": false,
-    "incremental": false,
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.spec.ts"
-  ]
+		// Remove problematic options
+		"isolatedModules": false,
+		"composite": false,
+		"incremental": false
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

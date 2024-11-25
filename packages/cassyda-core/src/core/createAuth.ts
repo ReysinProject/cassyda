@@ -1,4 +1,4 @@
-import {AuthClient, AuthConfig} from "@/index";
+import { AuthClient, type AuthConfig } from "@/index";
 
 /**
  * Creates an instance of AuthClient with the provided configuration.
@@ -6,5 +6,5 @@ import {AuthClient, AuthConfig} from "@/index";
  * @returns {AuthClient} - An instance of AuthClient configured with the provided settings.
  */
 export const createAuth = (config: AuthConfig): AuthClient => {
-    return new AuthClient(config);
+	return new AuthClient(config);
 };

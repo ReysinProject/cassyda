@@ -1,34 +1,61 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import {useEffect, useState} from "react";
+import type { AuthClient} from "@cassyda/core";
+import {auth} from "./authClient.ts";
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [accessToken, setAccessToken] = useState<string | null>(null);
+
+	const [authClient] = useState<AuthClient>(auth);
+
+	useEffect(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const code = urlParams.get('code');
+		window.history.replaceState({}, document.title, "/");
+		if (code) {
+			authClient.login({
+				scheme: 'default',
+				provider: 'discord',
+				params: {
+					code
+				}
+			}).then(() => {
+				authClient.getAccessToken().then((e) => {
+					setAccessToken(e);
+				})
+			})
+		}
+	}, [authClient]);
+
+	useEffect(() => {
+		authClient.getAccessToken().then((e) => {
+			setAccessToken(e);
+		})
+	}, [authClient. getAccessToken]);
+
+	const handleLogin = () => {
+		authClient.login({
+			scheme: 'default',
+			provider: 'discord'
+		}).then((e) => {
+			console.log(e)
+			console.log('Logged in!');
+		})
+	}
+
+	const handleLogout = () => {
+		authClient.logout().then(() => {
+			setAccessToken(null);
+		})
+	}
 
 	return (
-		<>
-			<div>
-				<a href="https://vite.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+		<div>
+			<button type={"button"} onClick={() => handleLogin()}>Login</button>
+			<p>token :</p>
+			<p>{accessToken}</p>
+			<button type={"button"} onClick={() => handleLogout()}>Logout</button>
+		</div>
 	);
 }
 

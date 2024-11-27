@@ -5,41 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66cf2cce-79d3-42fc-a442-2d5a11f30a62" name="Changes" comment="Init monorepo">
+      <change afterPath="$PROJECT_DIR$/examples/vite-react-ts/src/authClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/.vscode/extensions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/src/content/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/docs/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/eslint.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vite-react-ts/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vite-react-ts/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/core/AuthClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/core/AuthClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/core/createAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/core/createAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/providers/DiscordProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/providers/DiscordProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/providers/FacebookProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/providers/FacebookProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/providers/GitHubProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/providers/GitHubProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/providers/GoogleProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/providers/GoogleProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/providers/OAuth2Provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/providers/OAuth2Provider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/storage/CookieStorageStrategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/storage/CookieStorageStrategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/storage/LocalStorageStrategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/storage/LocalStorageStrategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/src/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-core/tsup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-core/tsup.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cassyda-react/tsup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cassyda-react/tsup.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,29 +21,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="tsconfig.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ER-28"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ER-28&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:ReysinProject/cassyda.git",
-    "accountId": "64272104-82fd-4c3e-9a63-70c3f9d51a03"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ReysinProject/cassyda.git&quot;,
+    &quot;accountId&quot;: &quot;64272104-82fd-4c3e-9a63-70c3f9d51a03&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2pLFi4cuu7LHLGnSynu7Xscy0Ea" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -81,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/l.guerra--rago/WebstormProjects/cassyda/packages/cassyda-core/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.cassyda-core > build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.lint:fix.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\l.guerra--rago\\WebstormProjects\\cassyda\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/l.guerra--rago/WebstormProjects/cassyda/packages/cassyda-core/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cassyda-core &gt; build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\l.guerra--rago\\WebstormProjects\\cassyda\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\l.guerra--rago\WebstormProjects\cassyda\packages\cassyda-core\src" />
@@ -110,7 +81,7 @@
       <recent name="C:\Users\l.guerra--rago\WebstormProjects\cassyda\packages\cassyda-core\src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:fix">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -163,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.cassyda-core &gt; build" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -186,7 +157,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732537572522</updated>
-      <workItem from="1732537574026" duration="3660000" />
+      <workItem from="1732537574026" duration="4092000" />
+      <workItem from="1732689643390" duration="1909000" />
     </task>
     <task id="LOCAL-00001" summary="Init monorepo">
       <option name="closed" value="true" />
@@ -204,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732540445252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Init monorepo">
+      <option name="closed" value="true" />
+      <created>1732541551074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732541551074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

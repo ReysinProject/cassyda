@@ -1,11 +1,11 @@
 # Cassida Core
 A flexible and extensible authentication library for TypeScript applications.
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/ReysinProject/cassyda-core)
-![GitHub License](https://img.shields.io/github/license/ReysinProject/cassyda-core)
-![GitHub top language](https://img.shields.io/github/languages/top/ReysinProject/cassyda-core)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/ReysinProject/cassyda-core)
-![GitHub contributors](https://img.shields.io/github/contributors-anon/ReysinProject/cassyda-core)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/ReysinProject/cassyda)
+![GitHub License](https://img.shields.io/github/license/ReysinProject/cassyda)
+![GitHub top language](https://img.shields.io/github/languages/top/ReysinProject/cassyda)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/ReysinProject/cassyda)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/ReysinProject/cassyda)
 
 
 ---
